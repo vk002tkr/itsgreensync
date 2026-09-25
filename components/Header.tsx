@@ -21,32 +21,25 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="header-container">
-        <Link
-          href="/"
-          className="header-logo"
-          aria-label="GreenSync Home"
-        >
+        <Link href="/" className="header-logo" aria-label="GreenSync Home">
           <Image
-            src="/images/greensync-logo.svg"
+            src="/greensync-logo.svg"
             alt="GreenSync"
-            width={210}
-            height={52}
+            width={48}
+            height={48}
             priority
-            style={{
-              width: "auto",
-              height: "38px",
-              objectFit: "contain",
-            }}
+            className="header-logo-image"
           />
+
+          <span className="header-logo-text">
+            <span className="header-logo-name">GreenSync</span>
+            <span className="header-logo-tagline">Digital Solutions</span>
+          </span>
         </Link>
 
         <nav className="desktop-nav" aria-label="Main navigation">
           {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="nav-link"
-            >
+            <Link key={item.href} href={item.href} className="nav-link">
               {item.label}
             </Link>
           ))}
@@ -105,13 +98,9 @@ export default function Header() {
             className={`mobile-menu-button ${
               mobileMenuOpen ? "is-open" : ""
             }`}
-            onClick={() =>
-              setMobileMenuOpen((current) => !current)
-            }
+            onClick={() => setMobileMenuOpen((current) => !current)}
             aria-label={
-              mobileMenuOpen
-                ? "Close navigation"
-                : "Open navigation"
+              mobileMenuOpen ? "Close navigation" : "Open navigation"
             }
             aria-expanded={mobileMenuOpen}
             aria-controls="mobile-navigation"
