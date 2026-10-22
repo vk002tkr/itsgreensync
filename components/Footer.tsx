@@ -126,8 +126,16 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>
-            © {new Date().getFullYear()} GreenSync. All rights reserved.
-          </p>
+  © 2026 GreenSync. All rights reserved. Secure and Powered by{"  "}
+  <a
+    href="https://ynrsgroup.in"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="hover:underline"
+  >
+    YNRS Business Solutions
+  </a>.
+</p>
 
           <div className="footer-bottom-links">
             <Link href="/privacy">
